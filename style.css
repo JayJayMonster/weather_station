@@ -1,0 +1,39 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sensors {
+    background: rgb(68,0,106);
+    background: linear-gradient(90deg, rgba(68,0,106,1) 0%, rgba(122,12,201,1) 52%, rgba(255,0,209,1) 100%);
+    opacity: 0.5;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#temp {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#alt {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#hum {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#pres {
+    margin-left: 4px;
+    margin-right: 4px;
+}
