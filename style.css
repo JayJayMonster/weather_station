@@ -1,39 +1,77 @@
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.sensors {
-    background: rgb(68,0,106);
-    background: linear-gradient(90deg, rgba(68,0,106,1) 0%, rgba(122,12,201,1) 52%, rgba(255,0,209,1) 100%);
-    opacity: 0.5;
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 10px;
-    padding: 4px;
-    border-radius: 8px;
-}
-
-h1 {
+/* Reset some default browser styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a background color for the page */
+  body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
     text-align: center;
+  }
+  
+  /* Style the header */
+  h1 {
+    font-size: 24px;
+    background-color: #9b4ddb; /* Light Purple */
+    color: #fff;
+    padding: 10px;
+  }
+  
+  /* Style the sensor containers */
+  .sensors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+/* Style individual sensor cards */
+.sensors > div {
+    background-color: #edeaee; /* Light Grayish Purple */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    flex-basis: calc(33.33% - 20px); /* Responsive column layout */
+  }
+  
+  /* Style sensor titles */
+  h2 {
+    font-size: 24px;
+    color: #482c50; /* Dark Grayish Purple */
+  }
+  
+  /* Style the unit (°C, %, hPa, m) next to the number */
+  .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 18px;
+    margin: 5px;
+    color: #7f8c8d; /* Gray */
 }
-
-#temp {
-    margin-left: 4px;
-    margin-right: 4px;
-}
-
-#alt {
-    margin-left: 4px;
-    margin-right: 4px;
-}
-
-#hum {
-    margin-left: 4px;
-    margin-right: 4px;
-}
-
-#pres {
-    margin-left: 4px;
-    margin-right: 4px;
-}
+  
+  /* Add a bit of space to the top-level sensors container */
+  .sensors {
+    margin-top: 20px;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    /* Adjust sensor card layout for smaller screens */
+    .sensors > div {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+  
+  /* Media query for even smaller screens */
+  @media (max-width: 480px) {
+    /* Adjust sensor card layout for even smaller screens */
+    .sensors > div {
+      flex-basis: 100%;
+    }
+  }
+  
